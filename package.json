@@ -1,0 +1,14 @@
+{
+  "name": "comercial-macri-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sitio web y catálogo de Comercial Macri Food Service",
+  "scripts": {
+    "dev": "npx --yes serve sitio -l 3000",
+    "verificar": "node scripts/verificar.mjs",
+    "catalogo": "node scripts/verificar.mjs && node scripts/catalogo-pdf.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.47.0"
+  }
+}

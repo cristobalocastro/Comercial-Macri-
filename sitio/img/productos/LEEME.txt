@@ -1,0 +1,4 @@
+Fotos de productos de Comercial Macri
+Guarda aquí las fotos con el nombre indicado en js/productos.js (campo "foto").
+Formato recomendado: JPG o WebP, cuadrada (1:1), fondo blanco, 800x800 px, menos de 200 KB.
+Si una foto falta, la web muestra una tarjeta "Foto pendiente" automáticamente.
