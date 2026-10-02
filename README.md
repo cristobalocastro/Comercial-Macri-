@@ -70,6 +70,7 @@ El PDF queda en `salida/catalogo-comercial-macri.pdf`. Se genera desde el mismo 
 El sitio no necesita servidor. Tres opciones:
 
 - **GitHub Pages** (gratis, recomendado): sube el repositorio a GitHub y en *Settings > Pages* elige *Source: GitHub Actions*. Cada cambio en `main` se publica solo, después de pasar `verificar`.
+- **Vercel** (gratis, funciona con repo privado): en vercel.com/new importa el repositorio y toca *Deploy*. `vercel.json` ya indica que se publica la carpeta `sitio` después de pasar `verificar`.
 - **Netlify o Cloudflare Pages** (gratis): conecta el repositorio y usa `sitio` como carpeta de publicación, sin comando de build.
 - **Hosting tradicional**: sube el contenido de `sitio/` por FTP.
 
