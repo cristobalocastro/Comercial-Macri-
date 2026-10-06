@@ -1,6 +1,6 @@
 // Comercial Macri · catálogo y pedido por WhatsApp
 (() => {
-  const WA_NUMBER = "56966460064"; // WhatsApp de ventas
+  const WA_NUMBER = "56966460064"; // WhatsApp de ventas principal (recibe los pedidos del carrito)
   const FOTOS = "img/productos/";
   const CATS = Object.fromEntries(window.CATEGORIAS.map(c => [c.id, c]));
   const PRODS = window.PRODUCTOS;
@@ -9,12 +9,12 @@
   const $ = (s, el = document) => el.querySelector(s);
   const $$ = (s, el = document) => [...el.querySelectorAll(s)];
   const clp = n => "$" + n.toLocaleString("es-CL");
-  const wa = msg => `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
+  const wa = (msg, num = WA_NUMBER) => `https://wa.me/${num}?text=${encodeURIComponent(msg)}`;
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
   // ---------- enlaces directos a WhatsApp ----------
   $$(".js-wa").forEach(a => {
-    a.href = wa(a.dataset.msg || "Hola Comercial Macri");
+    a.href = wa(a.dataset.msg || "Hola Comercial Macri", a.dataset.num || WA_NUMBER);
     a.target = "_blank";
     a.rel = "noopener";
   });
@@ -115,7 +115,7 @@
   });
 
   // collage de portada con los destacados
-  const PORTADA = ["salmon-filete", "nori-gold-yaki", "qc-schreiber", "soya-kikkoman"];
+  const PORTADA = ["salmon-filete", "nori-gold-yaki", "queso-crema-schreiber", "soya-kikkoman"];
   $("#collage").innerHTML = PORTADA.map(id => byId[id]).filter(Boolean).map(p =>
     `<div class="tile" data-id="${p.id}"><div class="ph-wrap" style="aspect-ratio:1/1;border-radius:12px;overflow:hidden">${media(p).replace('loading="lazy"', "")}</div><b>${esc(p.nombre)}</b></div>`
   ).join("");
