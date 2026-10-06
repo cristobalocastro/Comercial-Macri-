@@ -43,13 +43,19 @@ Abre http://localhost:3000. También puedes abrir `sitio/index.html` directament
    ```js
    { id: "queso-crema-nuevo", nombre: "Queso crema Nuevo", formato: "Barra 1,36 kg", categoria: "quesos", foto: "queso-crema-nuevo.jpg", precio: null, destacado: false },
    ```
-   - `categoria`: `sushi`, `quesos`, `congelados` (Pescados y mariscos) o `abarrotes`.
+   - `categoria`: `sushi`, `quesos`, `mar` (Pescados y mariscos), `abarrotes` o `envases`.
    - `precio`: siempre `null` (el sitio muestra "Precio a consultar").
    - `destacado: true` le pone la etiqueta "Más vendido".
 3. Revisa que todo esté bien:
    ```bash
    npm run verificar
    ```
+
+Para traer de una vez todos los productos con foto del catálogo de Bingrid (reemplaza `productos.js` y copia las fotos nuevas):
+
+```bash
+python3 scripts/desde-bingrid.py ruta/productos.json ruta/fotos/
+```
 
 Si falta una foto, el sitio muestra una tarjeta "Foto pendiente" en su lugar.
 
