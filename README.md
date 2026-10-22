@@ -78,5 +78,4 @@ Para usar un dominio propio (por ejemplo `comercialmacri.cl`), configúralo en e
 
 ## Pendientes
 
-- Falta la foto del queso crema Green Bay.
 - Agregar un correo de contacto en el pie de página si se crea uno.
