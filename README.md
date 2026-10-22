@@ -2,7 +2,7 @@
 
 Sitio de **Comercial Macri Food Service**, distribuidora de insumos para restaurantes de sushi, pizzerías y cocinas en Santiago.
 
-Es un sitio estático (HTML, CSS y JavaScript, sin frameworks). Los clientes arman su pedido en el catálogo y lo envían por WhatsApp al +56 9 6646 0064.
+Es un sitio estático (HTML, CSS y JavaScript, sin frameworks). Los clientes arman su pedido en el catálogo y lo envían por WhatsApp al +56 9 6646 0064. También se atiende en el +56 9 9599 3850.
 
 ## Estructura
 
@@ -78,6 +78,5 @@ Para usar un dominio propio (por ejemplo `comercialmacri.cl`), configúralo en e
 
 ## Pendientes
 
-- Datos por confirmar marcados con `[corchetes]` en `index.html`: horario, pedido mínimo, formas de pago y factura.
 - Faltan las fotos del queso crema Green Bay y del Rafulco.
-- Quitar el aviso amarillo "Borrador para revisión" (primer `<div class="draft">` de `index.html`) antes de publicar.
+- Agregar un correo de contacto en el pie de página si se crea uno.

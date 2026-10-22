@@ -9,12 +9,12 @@
   const $ = (s, el = document) => el.querySelector(s);
   const $$ = (s, el = document) => [...el.querySelectorAll(s)];
   const clp = n => "$" + n.toLocaleString("es-CL");
-  const wa = msg => `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
+  const wa = (msg, num = WA_NUMBER) => `https://wa.me/${num}?text=${encodeURIComponent(msg)}`;
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
   // ---------- enlaces directos a WhatsApp ----------
   $$(".js-wa").forEach(a => {
-    a.href = wa(a.dataset.msg || "Hola Comercial Macri");
+    a.href = wa(a.dataset.msg || "Hola Comercial Macri", a.dataset.num);
     a.target = "_blank";
     a.rel = "noopener";
   });

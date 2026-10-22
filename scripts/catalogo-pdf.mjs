@@ -10,8 +10,9 @@ const SALIDA = fileURLToPath(new URL("../salida/", import.meta.url));
 const { categorias: CATEGORIAS, productos: PRODUCTOS } = cargarCatalogo();
 const img=f=>{const p=SITE+'img/productos/'+f;return fs.existsSync(p)?'data:image/jpeg;base64,'+fs.readFileSync(p).toString('base64'):null};
 const WA='+56 9 6646 0064';
+const WA2='+56 9 9599 3850';
 const logo=`<div class="badge"><span>COMERCIAL</span><b>MACRI</b><span>FOOD SERVICE</span></div>`;
-const foot=(n)=>`<div class="pfoot"><span>Comercial Macri Ltda. · Julio César 10776, Santiago · Delivery a toda la RM</span><span class="wa">Pedidos WhatsApp ${WA}</span></div>`;
+const foot=(n)=>`<div class="pfoot"><span>Comercial Macri Ltda. · Julio César 10776, Santiago · Delivery a toda la RM</span><span class="wa">Pedidos WhatsApp ${WA} · ${WA2}</span></div>`;
 let pages=[];
 pages.push(`<section class="page cover">
   <div class="cv-top">${logo}</div>
@@ -19,7 +20,7 @@ pages.push(`<section class="page cover">
   <h1>Todo para tu cocina,<br><em>en un solo pedido.</em></h1>
   <p class="sub">Insumos para restaurantes de sushi, pizzerías y cocinas profesionales.</p>
   <ul class="cats">${CATEGORIAS.map(c=>`<li><span>${c.icono}</span>${c.nombre}</li>`).join('')}</ul></div>
-  <div class="cv-bot"><div><b>Pide por WhatsApp</b><span>${WA}</span></div><div><b>Delivery</b><span>A toda la Región Metropolitana</span></div><div><b>Retiro en local</b><span>Julio César 10776, Santiago</span></div><div><b>Instagram</b><span>@insumosmacri</span></div></div>
+  <div class="cv-bot"><div><b>Pide por WhatsApp</b><span>${WA}<br>${WA2}</span></div><div><b>Delivery</b><span>A toda la Región Metropolitana</span></div><div><b>Retiro en local</b><span>Julio César 10776, Santiago</span></div><div><b>Instagram</b><span>@insumosmacri</span></div></div>
 </section>`);
 const withPhoto=PRODUCTOS.filter(p=>img(p.foto));
 for(const c of CATEGORIAS){
@@ -30,9 +31,9 @@ for(const c of CATEGORIAS){
   }
 }
 pages.push(`<section class="page how"><header class="phead">${logo}<h2>Cómo hacer tu pedido</h2></header>
-<ol><li><b>Escríbenos por WhatsApp</b> al ${WA} con los productos y cantidades.</li><li><b>Te confirmamos</b> precio del día, stock y horario de entrega.</li><li><b>Recibe en tu local</b> (delivery a toda la RM) o <b>retira</b> en Julio César 10776, Santiago.</li></ol>
+<ol><li><b>Escríbenos por WhatsApp</b> al ${WA} o al ${WA2} con los productos y cantidades.</li><li><b>Te confirmamos</b> precio del día, stock y horario de entrega.</li><li><b>Recibe en tu local</b> (delivery a toda la RM) o <b>retira</b> en Julio César 10776, Santiago.</li></ol>
 <div class="note">Precios sujetos a cambios según mercado. Tenemos más productos de los que aparecen en este catálogo: pregúntanos.</div>
-<div class="big">${WA}</div>${foot()}</section>`);
+<div class="big">${WA}<br>${WA2}</div>${foot()}</section>`);
 const css=`@page{size:A4;margin:0}*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#111}
 .page{width:210mm;height:297mm;padding:14mm 14mm 20mm;position:relative;page-break-after:always;overflow:hidden;background:#fff}
 .badge{width:22mm;height:22mm;border-radius:50%;background:#000;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;box-shadow:inset 0 0 0 1mm #000,inset 0 0 0 1.5mm #fff;flex:none}
