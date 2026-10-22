@@ -72,7 +72,7 @@ Otras opciones, si algún día se cambia de servicio:
 - **Netlify o Cloudflare Pages** (gratis): conecta el repositorio y usa `sitio` como carpeta de publicación, sin comando de build.
 - **Hosting tradicional**: sube el contenido de `sitio/` por FTP.
 
-Para usar un dominio propio (por ejemplo `comercialmacri.cl`), configúralo en el servicio que elijas.
+El dominio es **comercialmacri.cl** (registrado en NIC Chile, con los servidores de nombre `ns1.vercel-dns.com` y `ns2.vercel-dns.com`).
 
 ## Pendientes
 
