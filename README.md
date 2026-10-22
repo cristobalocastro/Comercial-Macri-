@@ -18,8 +18,6 @@ scripts/
   verificar.mjs            revisa que el catálogo esté bien escrito
   catalogo-pdf.mjs         genera el catálogo PDF para WhatsApp
   preparar-foto.py         deja una foto cuadrada y liviana
-.github/workflows/
-  publicar.yml             publica en GitHub Pages al subir cambios
 ```
 
 ## Ver el sitio en tu computador
@@ -67,10 +65,10 @@ El PDF queda en `salida/catalogo-comercial-macri.pdf`. Se genera desde el mismo 
 
 ## Publicar
 
-El sitio no necesita servidor. Tres opciones:
+El sitio se publica en **Vercel**: cada cambio que llega a `main` se publica solo, después de pasar `verificar` (`vercel.json` indica que se publica la carpeta `sitio`).
 
-- **GitHub Pages** (gratis, recomendado): sube el repositorio a GitHub y en *Settings > Pages* elige *Source: GitHub Actions*. Cada cambio en `main` se publica solo, después de pasar `verificar`.
-- **Vercel** (gratis, funciona con repo privado): en vercel.com/new importa el repositorio y toca *Deploy*. `vercel.json` ya indica que se publica la carpeta `sitio` después de pasar `verificar`.
+Otras opciones, si algún día se cambia de servicio:
+
 - **Netlify o Cloudflare Pages** (gratis): conecta el repositorio y usa `sitio` como carpeta de publicación, sin comando de build.
 - **Hosting tradicional**: sube el contenido de `sitio/` por FTP.
 
