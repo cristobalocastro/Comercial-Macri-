@@ -40,6 +40,7 @@ window.PRODUCTOS = [
   { id: "qc-krol",             nombre: "Queso crema Krol",                 formato: "Barra 1,36 kg · sucedáneo",        categoria: "quesos",     foto: "queso-crema-krol.jpg",       precio: null, destacado: false },
   { id: "qc-green-bay",        nombre: "Queso crema Green Bay",            formato: "Barra 1,36 kg",                    categoria: "quesos",     foto: "queso-crema-green-bay.jpg",  precio: null, destacado: false },
   { id: "qc-rafulco",          nombre: "Queso crema Rafulco",              formato: "Barra 1,36 kg",                    categoria: "quesos",     foto: "queso-crema-rafulco.jpg",    precio: null, destacado: false },
+  { id: "qc-smithfield",       nombre: "Queso crema Smithfield",           formato: "Barra 1,36 kg · origen USA",       categoria: "quesos",     foto: "queso-crema-smithfield.jpg", precio: null, destacado: false },
   // Congelados
   { id: "camaron-36-40",       nombre: "Camarón 36/40 GAG",                formato: "Pelado desvenado asiático · 1 kg", categoria: "congelados", foto: "camaron-36-40.jpg",          precio: null, destacado: true },
   { id: "salmon-filete", nombre: "Filete de salmón", formato: "Con piel · consultar calibre y formato", categoria: "congelados", foto: "salmon-filete.jpg", precio: null, destacado: true },
